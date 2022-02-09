@@ -1,0 +1,153 @@
+{
+    "max_open_trades": 12,
+    "stake_currency": "USDT",
+    "stake_amount": 50,
+    "amend_last_stake_amount": true,
+    "tradable_balance_ratio": 1.00,
+    "fiat_display_currency": "USD",
+    "dry_run": true,
+    "timeframe": "1m",
+	
+    "unfilledtimeout": {
+        "buy": 20,
+        "sell": 20
+    },
+	
+    "bid_strategy": {
+        "use_order_book": false,
+        "ask_last_balance": 0.0,
+        "order_book_top": 1,
+        "price_side": "ask",
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+	
+    "ask_strategy":{
+        "use_order_book": false,
+        "order_book_min": 1,
+        "order_book_max": 1,
+		"use_sell_signal": true,
+		"sell_profit_only": true,
+		"ignore_roi_if_buy_signal": false
+    },
+	
+    "order_types": {
+        "buy": "market",
+        "sell": "limit",
+        "stoploss": "market",
+        "stoploss_on_exchange": false,
+		"stoploss_on_exhange_interval": 60
+    },
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "exchange": {
+        "name": "binance",
+        "sandbox": false,
+        "key": "your_exchange_key",
+        "secret": "your_exchange_secret",
+        "password": "",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "outdated_offset": 5,
+        "markets_refresh_interval": 60,
+        "pair_whitelist": [
+            "AAVE/USDT",
+            "ADA/USDT",
+            "AION/USDT",
+            "ALGO/USDT",
+            "ALICE/USDT",
+            "ALPHA/USDT",
+            "ANKR/USDT",
+            "AR/USDT",
+            "ATM/USDT",
+            "ATOM/USDT",
+            "AUDIO/USDT",
+            "AVA/USDT",
+            "AVAX/USDT",
+            "AXS/USDT",
+            "BAKE/USDT",
+            "BAT/USDT",
+            "BCH/USDT",
+            "BTC/USDT",
+            "BTCST/USDT",
+            "BTG/USDT",
+            "BTT/USDT",
+            "BURGER/USDT",
+            "CAKE/USDT",
+            "CELO/USDT",
+            "CELR/USDT",
+            "CHR/USDT",
+            "CHZ/USDT",
+            "CKB/USDT",
+            "COCOS/USDT",
+            "COMP/USDT",
+            "CRV/USDT",
+            "CTSI/USDT",
+            "DASH/USDT",
+            "DATA/USDT",
+            "DEGO/USDT",
+            "DENT/USDT",
+            "DGB/USDT",
+            "DNT/USDT",
+            "DOCK/USDT",
+            "DODO/USDT",
+            "DOGE/USDT",
+            "DOT/USDT",
+            "EGLD/USDT",
+            "ENJ/USDT",
+            "EOS/USDT",
+            "ETC/USDT",
+            "ETH/USDT"
+            
+			
+		]
+    },
+    "telegram": {
+        "enabled": true,
+        "token": "5246541924:AAGjPNimYeh7ZO-hmH505ShZJ79FcIFvNrs",
+        "chat_id": "5014131673",
+        "notification_settings": {
+            "status": "on",
+            "warning": "on",
+            "startup": "on",
+            "buy": "on",
+            "buy_fill": "on",
+            "sell": {
+                "roi": "off",
+                "emergency_sell": "off",
+                "force_sell": "off",
+                "sell_signal": "off",
+                "trailing_stop_loss": "off",
+                "stop_loss": "off",
+                "stoploss_on_exchange": "off",
+                "custom_sell": "off"
+            },
+            "sell_fill": "on",
+            "buy_cancel": "on",
+            "sell_cancel": "on",
+            "protection_trigger": "off",
+            "protection_trigger_global": "on"
+        },
+        "reload": true,
+        "balance_dust_level": 0.01
+    },
+	
+    "initial_state": "running",
+    "forcebuy_enable": true,
+    "internals": {
+        "process_throttle_secs": 5
+    },
+    "download_trades": true,
+    "disable_dataframe_checks": false,
+    "strategy": "toto1ststrat",
+    "strategy_path": "tototest/strategies/",
+    "dataformat_ohlcv": "json",
+    "dataformat_trades": "jsongz",
+    "available_capital": 1000,
+    "dry-run-wallet":1001
+}
